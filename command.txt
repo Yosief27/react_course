@@ -1,0 +1,2 @@
+1.get cdn from https://reactjs.org/docs/cdn-links.html and paste inside the header ,that meaning including the react library inside  our project
+2. and we use the bable compiler from https://babeljs.io/setup#installation ,that is compy the script header and also specify the text type inside the type by add text/babel
