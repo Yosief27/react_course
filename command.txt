@@ -1,2 +1,8 @@
 1.get cdn from https://reactjs.org/docs/cdn-links.html and paste inside the header ,that meaning including the react library inside  our project
 2. and we use the bable compiler from https://babeljs.io/setup#installation ,that is compy the script header and also specify the text type inside the type by add text/babel
+3. to create  a react with out adding direct under the script tag ,we can use the yarn or npx create-react-app
+yarn add global react-native-cli
+yarn add react-native
+react-native init app
+create-react-native-app myapp
+8. yarn init #to run the dependenceis 

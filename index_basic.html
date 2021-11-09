@@ -17,10 +17,29 @@
     <p>footer</p>
 </footer>    
 <script type="text/babel">
+    const title='Welcome to React course.'
+    
+    let Detail='Learning react with net ninja site.'
+    const link='https://netninja.dev';
+    const handleClick=()=>{
+        Detail='change on click!'
+        console.log(
+        'Done!'
+        )
+    }
     const Banner=()=>{
         return (
             <div>
-                <p>This is from react!</p>
+                <h1>{title.toUpperCase()}</h1>
+                <p>{Detail}</p>
+                <p>Todays date is :{new Date().toDateString()}</p>
+                
+                <p>Our lucky number is :{Math.random()*100}</p>
+                <a href={link}>Visit our teacher web site.</a>
+            <br/>
+                <button onClick={(e)=>{console.log(e);console.log(
+                    'done!')}}>Click</button>
+
             </div>
         )
         }
