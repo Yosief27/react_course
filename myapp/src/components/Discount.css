@@ -10,7 +10,17 @@
 .discount{
     padding:30px;
     max-width:480px;
-    margin:200px auto;
+ 
+    margin:50px auto;
     background:rgb(218, 198, 198);
     border-radius:10px;
+}
+.discount h2{
+    border-bottom:1px solid rgb(112, 216, 112);
+    padding-bottom: 10px;
+}
+.btn-style{
+    border:4px solid #333;
+    font-size: 19px;
+    text-transform:uppercase;
 }

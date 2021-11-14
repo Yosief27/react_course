@@ -11,23 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.title{
-  display:inline-block;
-  padding:30px 60px;
-  background:rgb(174, 230, 174);
-  border-radius:8px;
-  font-weight: normal;
-  margin-bottom: 10px;
+p,h1,h2{
+  color :rgb(92, 65, 33)
 }
-
-.subtitle{
-display:inline-block;
-color:rgb(29, 18, 2);
-
-  padding-bottom:20px;
-
-  font-weight: bold ;
-  margin-bottom: 60px;
-  margin-top:10px;
-  border-bottom:1px solid white;
+button{
+  background-color: rgb(209, 74, 74);
+  color:rgb(231, 214, 158);
+  padding:10px;
+  border:0;
+  border-radius: 4px;
+  margin:10px auto;
+  cursor:pointer;
 }

@@ -3,7 +3,7 @@ import './App.css';
 import React,{useState} from 'react';
 
 import Discount from './components/Discount';
-
+import AddEventForm from './components/AddEventForm';
 import Eventlist from './components/Eventlist';
 import Title from './components/Title';
 
@@ -12,6 +12,8 @@ function App() {
   // the useState function returns a function triggers the react to  reevaluate the react component
 
   const [showDiscount,setShowDiscount]=useState(true);
+
+  const [isSales,setisSales]=useState(true);
   const [showEvent,setShowevent]=useState(true);
   console.log(showEvent);
   const[events,setEvent]=useState([
@@ -25,6 +27,9 @@ function App() {
   ])
   const handleClick=(id)=>{
     setShowDiscount(true)
+    if(isSales===true){
+      setisSales(false)
+    }
     setEvent(
       (preEvents)=>{
         console.log(preEvents);
@@ -37,9 +42,11 @@ preEvents.filter((event)=>{
       if(showDiscount===true){
 
       setShowDiscount(false)
+      setisSales(false)
       }else{
         
       setShowDiscount(true)
+      setisSales(true)
       }
     };
 
@@ -68,11 +75,12 @@ preEvents.filter((event)=>{
 )}  
   
 {showEvent && <Eventlist events={events} handleOnchild={handleClick}/>}
-      {showDiscount && ( <Discount handleOnchild={handleDiscount}>
+
+      {showDiscount && ( <Discount handleOnchild={handleDiscount} isSales={isSales}>
         
      <h2>Be mindful of you world!!</h2> 
-     <br/>
-     <p>Keep watch your thoughts and be vigilant!!</p>
+     
+     <AddEventForm/>
       </Discount >
 )}
               </div>
