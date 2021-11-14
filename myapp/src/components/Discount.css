@@ -1,0 +1,16 @@
+.discount_class{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    
+    height:100%;
+    background:rgba(0,0,0,0.3)
+}
+.discount{
+    padding:30px;
+    max-width:480px;
+    margin:200px auto;
+    background:rgb(218, 198, 198);
+    border-radius:10px;
+}

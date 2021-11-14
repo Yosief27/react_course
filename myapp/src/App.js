@@ -1,11 +1,17 @@
 
 import './App.css';
-import {useState} from 'react';
+import React,{useState} from 'react';
+
+import Discount from './components/Discount';
+
+import Eventlist from './components/Eventlist';
+import Title from './components/Title';
 
 function App() {
   //the first value is the value itself and the second is the function which use to change the variable name.
   // the useState function returns a function triggers the react to  reevaluate the react component
-  let [name,setName]=useState('Fight a good fight!')
+
+  const [showDiscount,setShowDiscount]=useState(true);
   const [showEvent,setShowevent]=useState(true);
   console.log(showEvent);
   const[events,setEvent]=useState([
@@ -18,8 +24,7 @@ function App() {
     {title:'Remeber those who suffer all over the world!',id:4},
   ])
   const handleClick=(id)=>{
-    console.log(id);
-
+    setShowDiscount(true)
     setEvent(
       (preEvents)=>{
         console.log(preEvents);
@@ -28,9 +33,24 @@ preEvents.filter((event)=>{
       return event.id!==id
     })   )}
     )  }
+    const handleDiscount=()=>{
+      if(showDiscount===true){
+
+      setShowDiscount(false)
+      }else{
+        
+      setShowDiscount(true)
+      }
+    };
+
+    
+    const sub='List of my thoughts!';
   return (
     <div className="App">
-      <h1>{name}</h1>
+     
+
+
+      <Title title='My thoughts in a Day!' sub={sub}/>
      {!showEvent &&
 (<div>
         <button onClick={()=>{setShowevent(true)}}>
@@ -45,17 +65,17 @@ preEvents.filter((event)=>{
         </button>
 
       </div>
-)}       
-{showEvent && events.map((event,index)=>
-        (
-          <div key={event.id}>
-            <h1>{index}--{event.title}</h1>
-            <button onClick={()=>handleClick(event.id)}>Click to Delete Your thought</button>
-
-          </div>
-        )
-      )}
-    </div>
+)}  
+  
+{showEvent && <Eventlist events={events} handleOnchild={handleClick}/>}
+      {showDiscount && ( <Discount handleOnchild={handleDiscount}>
+        
+     <h2>Be mindful of you world!!</h2> 
+     <br/>
+     <p>Keep watch your thoughts and be vigilant!!</p>
+      </Discount >
+)}
+              </div>
   );
 }
 
