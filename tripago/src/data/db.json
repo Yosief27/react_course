@@ -1,0 +1,32 @@
+{
+    "trips":[
+        {"title":"2 night stay in venice",
+            "price":"f195",
+            "id":1,
+            "loc":"europe"
+        },
+        {"title":"3 night stay in venice",
+            "price":"f300"
+
+            ,"id":2
+            
+            ,"loc":"europe"
+        },
+        {"title":"4 night stay in venice",
+
+            "price":"f500"
+            
+            ,"id":3
+            ,
+            "loc":"europe"
+        },
+        {"title":"6 night stay in venice",
+            "price":"f700"
+
+            ,"id":4
+            ,
+            "loc":"america"
+        }
+
+    ]
+}
